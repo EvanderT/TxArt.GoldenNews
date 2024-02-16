@@ -17,8 +17,6 @@ namespace TxArt.GoldenNews.Data.Entidades
         public bool Activo { get; set; }
         public string FotoPerfilUrl { get; set; } = string.Empty;
         public string Nome { get; set; }
-        public string Email { get; set; } = string.Empty;
-        public string Senha { get; set; }
         public string Telefone { get; set; } = string.Empty;
 
         public List<Comentario> Comentarios { get; set; } = new List<Comentario>();

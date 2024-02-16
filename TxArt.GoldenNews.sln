@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34407.89
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxArt.GoldenNews.Web", "TxArt.GoldenNews.Web\TxArt.GoldenNews.Web.csproj", "{A531AFB9-CCB7-465E-B53A-847A6FFC686A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TxArt.GoldenNews.Web", "TxArt.GoldenNews.Web\TxArt.GoldenNews.Web.csproj", "{A531AFB9-CCB7-465E-B53A-847A6FFC686A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxArt.GoldenNews.Data", "TxArt.GoldenNews.Data\TxArt.GoldenNews.Data.csproj", "{A3689E80-0B3A-4632-BAE9-255E2BE7E0D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TxArt.GoldenNews.Data", "TxArt.GoldenNews.Data\TxArt.GoldenNews.Data.csproj", "{A3689E80-0B3A-4632-BAE9-255E2BE7E0D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Web", "0 - Web", "{671C571A-2B66-4E3F-805A-A638E9A6D813}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Data", "1 - Data", "{A1C42E6D-FE53-45C9-B894-3850ADE782F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A531AFB9-CCB7-465E-B53A-847A6FFC686A} = {671C571A-2B66-4E3F-805A-A638E9A6D813}
+		{A3689E80-0B3A-4632-BAE9-255E2BE7E0D4} = {A1C42E6D-FE53-45C9-B894-3850ADE782F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42E02C70-A80A-4EB5-83D3-21C1C7626BDB}

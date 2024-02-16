@@ -1,4 +1,4 @@
-namespace TxArt.GoldenNews.Web.Models
+namespace TxArt.GoldenNews.Web.ViewModels
 {
     public class ErrorViewModel
     {

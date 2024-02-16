@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using TxArt.GoldenNews.Data.Contexto;
 using TxArt.GoldenNews.Data.Contexto.Seed;
 using TxArt.GoldenNews.Data.Entidades;
+using TxArt.GoldenNews.Data.Repositories.Interfaces;
+using TxArt.GoldenNews.Data.Repositories.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,39 +34,20 @@ builder.Services.AddScoped<UserManager<Usuario>>();
 
 #region:Register Dependencies
 
-//Autenticação e Autorização
-//builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddScoped<IComentarioRepository, ComentarioRepository>();
+builder.Services.AddScoped<IMediaRepository, MediaRepository>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
+builder.Services.AddScoped<IPostTagRepository, PostTagRepository>();
+builder.Services.AddScoped<IReacaoRepository, ReacaoRepository>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ITipoMediaRepository, TipoMediaRepository>();
+builder.Services.AddScoped<ITipoReacaoRepository, TipoReacaoRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
-////Gestão de Comunicação
-//builder.Services.AddScoped<ICategoriaNoticiaRepository, CategoriaNoticiaRepository>();
-//builder.Services.AddScoped<IComentarioRepository, ComentarioRepository>();
-//builder.Services.AddScoped<IConversaRepository, ConversaRepository>();
-//builder.Services.AddScoped<IMensagemRepository, MensagemRepository>();
-//builder.Services.AddScoped<INoticiaRepository, NoticiaRepository>();
-//builder.Services.AddScoped<IParticipanteConversaRepository, ParticipanteConversaRepository>();
-//builder.Services.AddScoped<ITipoNoticiaRepository, TipoNoticiaRepository>();
 
-////Gestão de Recursos Humanos
-//builder.Services.AddScoped<ICargoRepository, CargoRepository>();
-//builder.Services.AddScoped<IContratoFuncionarioRepository, ContratoFuncionarioRepository>();
-//builder.Services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
-//builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
-//builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
-//builder.Services.AddScoped<ITipoContratoFuncionarioRepository, TipoContratoFuncionarioRepository>();
-
-////Gestão Documental
-//builder.Services.AddScoped<IDiretorioRepository, DiretorioRepository>();
-//builder.Services.AddScoped<IFicheiroRepository, FicheiroRepository>();
-//builder.Services.AddScoped<IPermissaoRepository, PermissaoRepository>();
-//builder.Services.AddScoped<IPermissaoDiretorioRepository, PermissaoDiretorioRepository>();
-//builder.Services.AddScoped<IPermissaoFicheiroRepository, PermissaoFicheiroRepository>();
-
-////Gestão De Eventos
-//builder.Services.AddScoped<IEventoRepository, EventoRepository>();
-//builder.Services.AddScoped<IEstadoEventoRepository, EstadoEventoRepository>();
-//builder.Services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
-
-////Multiple constructors for controllers
+//Multiple constructors for controllers
 //builder.Services.AddScoped(sp => ActivatorUtilities.CreateInstance<EgateIntranet.Web.Areas.Admin.Controllers.EventosController>(sp));
 //builder.Services.AddScoped(sp => ActivatorUtilities.CreateInstance<EgateIntranet.Web.Areas.Admin.Controllers.NoticiasController>(sp));
 //builder.Services.AddScoped(sp => ActivatorUtilities.CreateInstance<EgateIntranet.Web.Controllers.NoticiasController>(sp));

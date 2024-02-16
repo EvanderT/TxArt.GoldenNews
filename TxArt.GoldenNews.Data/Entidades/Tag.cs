@@ -9,6 +9,6 @@ namespace TxArt.GoldenNews.Data.Entidades
     public class Tag : BaseEntity
     {
         public string Nome { get; set; }
-        public virtual List<PostTag> PostTags { get; set; }
+        public virtual List<PostTag> PostTags { get; set; } = new List<PostTag>();
     }
 }

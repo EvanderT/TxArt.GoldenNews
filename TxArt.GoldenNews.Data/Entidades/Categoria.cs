@@ -19,6 +19,6 @@ namespace TxArt.GoldenNews.Data.Entidades
         }
         public string Nome { get; set; }
 
-        public virtual List<Post> Posts { get; set; }
+        public virtual List<Post> Posts { get; set; } = new List<Post>();
     }
 }

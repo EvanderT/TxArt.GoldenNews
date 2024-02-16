@@ -11,6 +11,7 @@ namespace TxArt.GoldenNews.Data.Entidades
         public string Descricao { get; set; } = string.Empty;
         public string PostId { get; set; } 
         public string UsuarioId { get; set; }
+        public bool Aprovado { get; set; }
 
         public virtual Post Post { get; set; }
         public virtual Usuario Usuario { get; set; }

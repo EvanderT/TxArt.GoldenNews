@@ -19,13 +19,6 @@ namespace TxArt.GoldenNews.Data.EntityConfig
             builder.Property(p => p.Nome)
                 .HasColumnType("varchar(250)");
 
-            builder.Property(p => p.Email)
-                .HasColumnType("varchar(250)");
-
-            builder.Property(p => p.Senha)
-                .HasColumnType("varchar(250)");
-
-
             builder.Property(p => p.Telefone)
                 .HasColumnType("varchar(20)");
         }

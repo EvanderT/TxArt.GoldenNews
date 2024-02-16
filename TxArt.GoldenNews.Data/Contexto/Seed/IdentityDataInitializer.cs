@@ -40,6 +40,7 @@ namespace TxArt.GoldenNews.Data.Contexto.Seed
             {
                 var user = new Usuario
                 {
+                    Nome = "Administrador",
                     UserName = "admin",
                     Email = "admin@txart.ao",
                     EmailConfirmed = true

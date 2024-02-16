@@ -1,0 +1,42 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row  bg-white rounded mt-5">
+    <div class="col-md-6 p-4">
+        <h4>LOGIN</h4>
+        <form method="post" asp-action="Login" class="p-5">
+            <div class="form-inputs">
+                <div class="mb-2">
+                    <input asp-for="Usuario" placeholder="USUÁRIO OU EMAIL" class="form-control" />
+                    <span asp-validation-for="Usuario"></span>
+                </div>
+                <div class="mb-2">
+                    <input asp-for="Senha" placeholder="SENHA" class="form-control" />
+                    <span asp-validation-for="Senha"></span>
+                </div>
+                <div class="mb-3 d-flex gap-2">
+                    <input asp-for="Lembrar" class="form-check" />
+                    <label asp-for="Lembrar">Lembrar?</label>
+                </div>
+                <div class="form-item">
+                    <button class="btn btn-primary" style="text-align:center;" type="submit">Entrar</button>
+                    <p class="text-danger">@Html.ValidationSummary()</p>
+                </div>
+
+            </div>
+        </form>        
+    </div>
+    <div class="col-md-6 rounded-end d-flex justify-content-center align-items-center bg-brown text-white p-3">
+        <h5>Esteja sempre actualizado com as melhores Notícias!</h5>
+    </div>
+</div>
+
+@section Styles{
+    <style>
+        body{
+            background: #ffae06;
+        }
+    </style>
+}

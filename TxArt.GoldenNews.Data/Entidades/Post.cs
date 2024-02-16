@@ -16,9 +16,9 @@ namespace TxArt.GoldenNews.Data.Entidades
         public string UsuarioId { get; set; }
         public virtual Categoria Categoria { get; set; }
         public virtual Usuario Usuario { get; set; }
-        public virtual List<Comentario> Comentarios { get; set; }
-        public virtual List<PostTag> PostTags { get; set; }
-        public virtual List<Reacao> Reacoes { get; set; }
-        public virtual List<Media> Medias { get; set; }
+        public virtual List<Comentario> Comentarios { get; set; } = new List<Comentario>();
+        public virtual List<PostTag> PostTags { get; set; } = new List<PostTag>();
+        public virtual List<Reacao> Reacoes { get; set; } = new List<Reacao>();
+        public virtual List<Media> Medias { get; set; } = new List<Media>();
     }
 }

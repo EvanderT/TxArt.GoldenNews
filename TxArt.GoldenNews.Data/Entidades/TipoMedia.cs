@@ -9,6 +9,6 @@ namespace TxArt.GoldenNews.Data.Entidades
     public class TipoMedia : BaseEntity
     {
         public string Nome { get; set; }
-        public List<Media> Medias { get; set; }
+        public List<Media> Medias { get; set; } = new List<Media>();
     }
 }

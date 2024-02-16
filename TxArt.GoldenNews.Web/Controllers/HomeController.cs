@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using TxArt.GoldenNews.Web.Models;
+using TxArt.GoldenNews.Web.ViewModels;
 
 namespace TxArt.GoldenNews.Web.Controllers
 {
