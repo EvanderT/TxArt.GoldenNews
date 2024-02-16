@@ -13,11 +13,15 @@ namespace TxArt.GoldenNews.Data.Contexto.Seed
         {
             string[] nomes = {
                 "Sem Categoria",
-                "Informática",
+                "Tecnologia",
                 "Programação",
                 "Departamento de Tecnologia da Informação (TI)",
                 "Anúncio",
-                "Saúde e Bem-Estar"
+                "Saúde",
+                "Desporto",
+                "Economia",
+                "Entreternimento"
+                
             };
 
 

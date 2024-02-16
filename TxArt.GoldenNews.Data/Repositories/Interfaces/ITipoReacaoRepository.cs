@@ -7,10 +7,8 @@ using TxArt.GoldenNews.Data.Entidades;
 
 namespace TxArt.GoldenNews.Data.Repositories.Interfaces
 {
-    public interface IUsuarioRepository:IBaseRepository<Usuario>
+    public interface ITipoReacaoRepository:IBaseRepository<TipoReacao>
     {
-
-        Usuario BuscarPorNome(string nome);
 
     }
 }

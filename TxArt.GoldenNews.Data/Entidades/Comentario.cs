@@ -8,8 +8,8 @@ namespace TxArt.GoldenNews.Data.Entidades
 {
     public class Comentario : BaseEntity
     {
-        public string Descricao { get; set; }
-        public string PostId { get; set; }
+        public string Descricao { get; set; } = string.Empty;
+        public string PostId { get; set; } 
         public string UsuarioId { get; set; }
 
         public virtual Post Post { get; set; }

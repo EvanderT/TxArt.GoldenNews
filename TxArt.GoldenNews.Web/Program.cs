@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TxArt.GoldenNews.Data.Contexto;
+using TxArt.GoldenNews.Data.Contexto.Seed;
 using TxArt.GoldenNews.Data.Entidades;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -86,10 +87,37 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+#region:Registar rotas
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+#endregion
+
+#region: Create a scope for the service provider
+using (var scope = app.Services.CreateScope())
+{
+    // Retrieve the UserManager<Usuario> instance from the scoped service provider
+    var userManager = scope.ServiceProvider.GetService<UserManager<Usuario>>();
+    var roleManager = scope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
+    var context = scope.ServiceProvider.GetService<AppDbContext>();
+
+    // Call the SeedData static method from the IdentityDataInitializer class
+    await IdentityDataInitializer.SeedData(userManager, roleManager);
+
+    await CategoriaSeed.SeedData(context);
+    await TagSeed.SeedData(context);
+    await TipoMediaSeed.SeedData(context);
+    await TipoReacaoSeed.SeedData(context);
+}
+
+#endregion
 
 app.Run();
