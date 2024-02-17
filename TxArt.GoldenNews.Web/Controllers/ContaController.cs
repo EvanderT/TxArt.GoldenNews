@@ -64,16 +64,12 @@ namespace TxArt.GoldenNews.Web.Controllers
             return View(viewModel);
         }
 
-        [HttpGet]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }

@@ -28,3 +28,7 @@ body {
 .bg-gold {
     background: #ffae06;
 }
+
+.logout-link{
+    outline:none;
+}

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Lista de Usuários";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int count = 1;
+}
+
+<h3 class="mt-2">@ViewData["Title"]</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data de Cadastro</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model!=null && Model.Count > 0)
+        {
+            foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@(count++)</td>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Email</td>
+                    <td>@usuario.DataCadastro</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-primary">Ver</a>
+                    </td>
+                </tr>
+            }
+        } 
+
+    </tbody>
+
+</table>

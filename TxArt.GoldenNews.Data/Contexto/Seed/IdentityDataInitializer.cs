@@ -41,9 +41,8 @@ namespace TxArt.GoldenNews.Data.Contexto.Seed
                 var user = new Usuario
                 {
                     Nome = "Administrador",
-                    UserName = "admin",
+                    UserName = "Admin",
                     Email = "admin@txart.ao",
-                    EmailConfirmed = true
                 };
 
                 IdentityResult result = await userManager.CreateAsync(user, "123456");
@@ -51,6 +50,7 @@ namespace TxArt.GoldenNews.Data.Contexto.Seed
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(user, "Admin");
+                    await userManager.AddToRoleAsync(user, "Gestor de Conteúdo");
                 }
                 else
                 {

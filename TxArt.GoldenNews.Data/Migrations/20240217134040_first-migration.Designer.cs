@@ -12,8 +12,8 @@ using TxArt.GoldenNews.Data.Contexto;
 namespace TxArt.GoldenNews.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240216024514_remove-senha-from-usersTable")]
-    partial class removesenhafromusersTable
+    [Migration("20240217134040_first-migration")]
+    partial class firstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -165,6 +165,9 @@ namespace TxArt.GoldenNews.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Aprovado")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DataCadastro")
